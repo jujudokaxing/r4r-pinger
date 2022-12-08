@@ -97,6 +97,7 @@ for submission in new_submission:
 		print(show_con)
 		print(show_auth)
 		print(Style.RESET_ALL)
+	#	os.system('python show_post.py ' + str(submission)) # linked with show_post, to show text box
 
 
 new_submission = subreddit.new(limit=usernumberlimit) # redeclare userlimit
@@ -130,4 +131,5 @@ with Spinner():
 			#	box_pop(content)
 				flag2.append(submission)
 				Beep(2000, 1100) # make a beep sound; frequency, duration
+				os.system('python show_post.py ' + str(submission))
 	#	time.sleep(pause_time_wait) # activate to allow waiting
