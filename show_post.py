@@ -10,11 +10,12 @@ g = sys.argv # submission id not fixed
 subm_id = g[-1]
 
 # login to reddit
-reddit = praw.Reddit(client_id = '',
-					client_secret = '', 
-					username = '',
-					password = '',
-					user_agent = '',)
+reddit = praw.Reddit(client_id = 'qd3fFRnBK468ud50B-D-lA',
+					client_secret = 'wXZctO0d2rQb2fujr2pnschuAPN3aA', 
+					username = 'DempseyCallz',
+					password = 'Mountaindew!1',
+					user_agent = 'NANANA',)
+
 
 post_red = reddit.submission(id=subm_id)
 
