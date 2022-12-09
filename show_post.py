@@ -31,3 +31,5 @@ mainloop()
 
 # old message box, smaller
 # msgb0x(str(b), str(a))
+
+exit()
