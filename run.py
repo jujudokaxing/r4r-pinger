@@ -131,5 +131,5 @@ with Spinner():
 			#	box_pop(content)
 				flag2.append(submission)
 				Beep(2000, 1100) # make a beep sound; frequency, duration
-				os.system('python show_post.py ' + str(submission))
+				os.system('runner.bat ' + str(submission))
 	#	time.sleep(pause_time_wait) # activate to allow waiting
