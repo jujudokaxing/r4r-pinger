@@ -26,6 +26,7 @@ reddit = praw.Reddit(client_id = '',
 
 
 
+
 init()
 os.system('cls')
 
@@ -131,5 +132,5 @@ with Spinner():
 			#	box_pop(content)
 				flag2.append(submission)
 				Beep(2000, 1100) # make a beep sound; frequency, duration
-				os.system('runner.bat ' + str(submission))
+				os.system('start pythonw show_post.py ' + str(submission) + ' 2>nul')
 	#	time.sleep(pause_time_wait) # activate to allow waiting
