@@ -10,16 +10,21 @@ g = sys.argv # submission id not fixed
 subm_id = g[-1]
 
 # login to reddit
-reddit = praw.Reddit(client_id = 'qd3fFRnBK468ud50B-D-lA',
-					client_secret = 'wXZctO0d2rQb2fujr2pnschuAPN3aA', 
-					username = 'DempseyCallz',
-					password = 'Mountaindew!1',
-					user_agent = 'NANANA',)
+reddit = praw.Reddit(client_id = '',
+					client_secret = '', 
+					username = '',
+					password = '',
+					user_agent = ',)
 
+def get_date(submission):
+	time = submission.created
+	d = datetime.datetime.fromtimestamp(time)
+	d = str(d)
+	return d
 
 post_red = reddit.submission(id=subm_id)
 
-content = str(post_red.title) + '\nBy: ' + str(post_red.author) + '\n\n' + str(post_red.selftext)
+content = str(post_red.title) + '\nBy: ' + str(post_red.author) + '\n' + str(get_date(post_red))+  '\n\n\n' + str(post_red.selftext)
 a = '[F4M] FOUND!'
 b = content
 
