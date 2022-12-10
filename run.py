@@ -84,22 +84,24 @@ new_submission = subreddit.new(limit=50)
 
 print('\n Latest 7 posts in r/' + subrdd + ': \n')
 for submission in new_submission:
-	if "[F4M]" in str(submission.title).upper():
-		if flag > 6:
-			break
-		else:
-			flag = flag + 1
-		dd = submission.title.split()
-		if int(dd[0]) <= 22:
-			print(Fore.WHITE, end='') 
-		
-		show_con = '\t [' + str(flag) +  ']  ' + str(get_date(submission)) + '\t' + str(submission.title)
-		show_auth = '\t\tUser: ' + str(submission.author)
-		print(show_con)
-		print(show_auth)
-		print(Style.RESET_ALL)
-	#	os.system('python show_post.py ' + str(submission)) # linked with show_post, to show text box
-
+	try:
+		if "[F4M]" in str(submission.title).upper():
+			if flag > 6:
+				break
+			else:
+				flag = flag + 1
+			dd = submission.title.split()
+			if int(dd[0]) <= 22:
+				print(Fore.WHITE, end='') 
+			
+			show_con = '\t [' + str(flag) +  ']  ' + str(get_date(submission)) + '\t' + str(submission.title)
+			show_auth = '\t\tUser: ' + str(submission.author)
+			print(show_con)
+			print(show_auth)
+			print(Style.RESET_ALL)
+		#	os.system('python show_post.py ' + str(submission)) # linked with show_post, to show text box
+	except:
+		pass
 
 new_submission = subreddit.new(limit=usernumberlimit) # redeclare userlimit
 
